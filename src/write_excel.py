@@ -14,3 +14,4 @@ for file in files:
         df = df.append(pd.read_excel(file), ignore_index=True)
 
 df.to_excel('total_sales.xlsx')
+
