@@ -1,7 +1,7 @@
 import pandas as pd
 import glob
 
-location = "C:\\Users\\abduh\\OneDrive\\Desktop\\Task NBU\\src\\*.xlsx"
+location = "C:\\Users\\abduh\\OneDrive\\Desktop\\Task NBU\\*.xlsx"
 excel_files = glob.glob(location)
 # print(excel_files)
 
@@ -13,9 +13,9 @@ for excel_file in excel_files:
     df2 = pd.read_excel(excel_file)
     df1 = pd.concat([df1, df2], ignore_index=True)
 
-df1.fillna(value = "N/A", inplace=True)
-
-df1.to_excel("C:\\Users\\abduh\\OneDrive\\Desktop\\Task NBU\\src\\combined sleep data\\all_sleep_data.xlsx", index=True)
+df1.to_excel(
+    "C:\\Users\\abduh\\OneDrive\\Desktop\\Task NBU\\src\\combined sleep data\\all_sleep_data.xlsx", index=True
+)
 
 
 print(df1)

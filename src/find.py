@@ -38,9 +38,9 @@ def get_links(years):
         # break
 
 
+# get_links(years)
+# print(f"User can send only {count} requests into platform")
 
-get_links(years)
-print(f"User can send only {count} requests into platform")
 
 def download_excel_files():
     """ This function downloads all excel files """
@@ -65,11 +65,9 @@ def download_excel_files():
                 file.write(req.content)
             count += 1
 
-for i in range(50):
-    download_excel_files()
+if __name__ == '__main__':
+    for i in range(50):
+        get_links(years)
+        print(f"User can send only {count} requests into platform")
+        download_excel_files()
 
-# optimallashtirish
-# try except
-# adminkani excelga import export qilish using export library
-
-# pip install django jazzmin for beautifull admin
